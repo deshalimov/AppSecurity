@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenu">
+    <fragment
+        android:id="@+id/changeEmail"
+        android:name="com.example.security.ChangeEmailFragment"
+        android:label="change_email"
+        tools:layout="@layout/change_email" />
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.example.security.MainMenuFragment"
+        android:label="main_menu"
+        tools:layout="@layout/main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_changeEmail"
+            app:destination="@id/changeEmail" />
+        <action
+            android:id="@+id/action_mainMenu_to_personalData"
+            app:destination="@id/personalData" />
+        <action
+            android:id="@+id/action_mainMenu_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
+        <action
+            android:id="@+id/action_mainMenu_to_changePersonalDataFragment"
+            app:destination="@id/changePersonalDataFragment" />
+        <action
+            android:id="@+id/action_mainMenu_to_zone"
+            app:destination="@id/zone" />
+        <action
+            android:id="@+id/action_mainMenu_to_deleteAccountFragment"
+            app:destination="@id/deleteAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalData"
+        android:name="com.example.security.PersonalDataFragment"
+        android:label="personal_data"
+        tools:layout="@layout/personal_data" />
+    <fragment
+        android:id="@+id/signOutFragment"
+        android:name="com.example.security.SignOutFragment"
+        android:label="sign_out"
+        tools:layout="@layout/sign_out" />
+    <fragment
+        android:id="@+id/changePersonalDataFragment"
+        android:name="com.example.security.ChangePersonalDataFragment"
+        android:label="change_personal_data"
+        tools:layout="@layout/change_personal_data" />
+    <fragment
+        android:id="@+id/zone"
+        android:name="com.example.security.Zone"
+        android:label="zone"
+        tools:layout="@layout/zone" />
+    <fragment
+        android:id="@+id/deleteAccountFragment"
+        android:name="com.example.security.DeleteAccountFragment"
+        android:label="delete_account"
+        tools:layout="@layout/delete_account" />
+</navigation>
